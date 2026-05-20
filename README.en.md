@@ -103,6 +103,7 @@ skills/
     │   └── teaching-playbook.md
     └── assets/
         ├── learning-plan-template.md
+        ├── mistakes-log-template.md
         ├── mastery-check-template.md
         ├── project-brief-template.md
         ├── session-review-template.md
@@ -132,6 +133,41 @@ OpenAI Skills use a portable format that can be shared across compatible product
 If your ChatGPT or Codex build exposes a Skills page or an import flow, you can also upload the entire `learn-anything-skill` folder there.
 
 Upload the whole folder, not just `SKILL.md`, so `references/` and `assets/` remain available.
+
+## Recommended Learning Directory Workflow
+
+Do not study inside a cluttered general workspace if you can avoid it.  
+Create a dedicated learning directory first, then invoke the skill from inside that directory.
+
+For example, if you want to study AI in a structured way:
+
+```bash
+mkdir -p learn-ai
+cd learn-ai
+```
+
+Then use `learn-anything-skill` inside that directory.
+
+Why this is recommended:
+
+- study plans can be saved automatically as Markdown files
+- study notes can accumulate over time instead of disappearing into chat history
+- session reviews, mastery checks, and mistake logs stay in one place
+- materials, exercises, notes, and project briefs for one topic do not get mixed into unrelated projects
+
+By default, the skill prefers writing learning outputs into a `study/` subdirectory under the current working directory, for example:
+
+```text
+learn-ai/
+└── study/
+    ├── ai-learning-plan.md
+    ├── ai-notes.md
+    ├── ai-session-review.md
+    ├── ai-mastery-check.md
+    └── ai-mistakes-log.md
+```
+
+If the directory already has a better learning-material structure, the skill should reuse that existing structure instead of creating scattered duplicate files.
 
 ## Install in Claude Code
 
@@ -240,6 +276,8 @@ If you want fuller reuse inside OpenCode:
 ## Usage
 
 ## 1. Explicit invocation
+
+It is recommended to enter a topic-specific learning directory first so generated plans, notes, and reviews can be saved into that workspace automatically.
 
 Use this when you already know what you want it to do:
 
