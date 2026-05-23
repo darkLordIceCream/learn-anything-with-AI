@@ -1,0 +1,52 @@
+{
+  "features": [
+    {
+      "id": "feat-001",
+      "name": "OpenCode skill packaging",
+      "description": "Make learn-anything-skill loadable as an OpenCode skill. Register skill path in opencode.json.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "opencode.json created with skills.paths: ['skills'] pointing to skills/learn-anything-skill/SKILL.md"
+    },
+    {
+      "id": "feat-002",
+      "name": "Harness framework (AGENTS.md)",
+      "description": "Add harness-aware sections: startup workflow, definition of done, session rules, end-of-session checklist.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "AGENTS.md updated with startup workflow, working rules, definition of done, end of session checklist"
+    },
+    {
+      "id": "feat-003",
+      "name": "Session continuity (progress.md + feature_list.json)",
+      "description": "Create progress tracking artifacts for session handoff and continuity.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "feature_list.json and progress.md created, both valid JSON/Markdown"
+    },
+    {
+      "id": "feat-004",
+      "name": "SKILL.md description optimization",
+      "description": "Tighten SKILL.md frontmatter description for OpenCode skill listing budget.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "Description tightened from ~300 to ~200 chars, front-loaded with trigger keywords"
+    },
+    {
+      "id": "feat-005",
+      "name": "One-line install (oh-my-openagent pattern)",
+      "description": "Create docs/guide/installation.md and add one-liner copy-paste install to README.",
+      "dependencies": ["feat-001"],
+      "status": "done",
+      "evidence": "docs/guide/installation.md with human + LLM agent install instructions. README one-liner section."
+    },
+    {
+      "id": "feat-006",
+      "name": "README redesign — fork identity + high-aesthetics",
+      "description": "Rewrite README.md and README.en.md with GitHub high-aesthetics template. Add fork notice, badges, emoji sections, collapsible use cases, and OpenCode-native focus.",
+      "dependencies": ["feat-005"],
+      "status": "done",
+      "evidence": "README.md and README.en.md fully rewritten with shields.io badges, fork banner, collapsible use cases, table-structured comparisons, emoji section markers."
+    }
+  ]
+}
